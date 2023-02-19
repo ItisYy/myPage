@@ -1,0 +1,15 @@
+body
+{
+    animation-name: tekitou;
+    animation-duration: 1s;
+}
+
+@keyframes tekitou
+{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
