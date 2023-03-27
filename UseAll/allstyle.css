@@ -1,15 +1,133 @@
-body
+@font-face
 {
-    animation-name: tekitou;
-    animation-duration: 1s;
+    font-family: "Regular";
+    src:url(../Tools/F1.8-Regular.otf);
 }
 
-@keyframes tekitou
+body
+{
+    background: whitesmoke;
+}
+header,div,hooter
+{
+    animation-name: startup;
+    animation-duration: 1s;
+}
+@keyframes startup
 {
     0%{
+        opacity: 0;
+    }
+    50%
+    {
         opacity:0;
     }
-    100%{
-        opacity:1;
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+
+.backimg
+{
+    border:solid 3px gray;
+}
+
+f1
+{
+    font-family: "Regular";
+}
+hr
+{
+    border:solid 1.5px gray;
+}
+.tabs
+{
+    color:black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    transform: scale(1,1);
+}
+.tabs:hover
+{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+.link
+{
+    color:black;
+    text-decoration: none;
+    content:5px;
+}
+.link:hover
+{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    border-bottom:solid 4px gray;
+    border-top:solid 4px gray;
+}
+
+.leftcont .rightcont
+{
+    background:gray;
+}
+
+
+/* 上pc、下スマホ*/
+@media screen and (min-width:481px) 
+{
+    .backimg
+    {
+        background-image: url(../UseAll/stickman.jpg);
+        background-size: cover;
+        padding:100px;
+    }
+    .all
+    {
+        display: flex;
+    }
+    .leftcont
+    {
+        flex:5;
+        border-right:2.5px gray solid;
+    }
+    .rightcont
+    {
+        flex:1;
+        text-align: center;
+    }
+    .list
+    {
+        display:flex;
+        margin:10px;
+    }
+    .whois
+    {
+        text-align: center;
+    }
+    .icon
+    {
+        transition-duration: 0.2s;
+        transform: scale(1,1);
+    }
+    .icon:hover
+    {
+        transform: scale(1.2,1.2);
+    }
+}
+@media screen and (max-width:480px)
+{
+    .backimg
+    {
+        background-image: url(../UseAll/stickman.jpg);
+        background-size: 140%;
+        padding:20px 20px;
+    }
+    .icon
+    {
+        width: 40%;
+        height: 40%;
     }
 }
